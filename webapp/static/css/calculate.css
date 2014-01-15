@@ -1,0 +1,72 @@
+body{
+    margin:0;
+    padding:0;
+}
+.footer{
+    bottom:0;
+    position:fixed;
+    width:100%;
+}
+.ui-tabs .ui-tabs-nav li a {
+    font-size:10pt !important;
+}
+#accordion_content label {
+    font-size: 10px;
+}
+input {
+    width: 100% !important;
+    font-size: 10px !important;
+}
+select {
+    width: 100% !important;
+    font-size: 11px !important;
+}
+#tabs {
+    visibility: hidden;
+    height: 80%;
+}
+#tabs-2 ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 10px;
+}
+#tabs-2 li {
+    margin: 10px;
+    font-size: 12px;
+}
+#accordion {
+    visibility: hidden;
+}
+#accordion_content, #accordion_content2 {
+    background: #ccc;
+    height: 69%;
+}
+#map{ 
+    height: 80%;
+}
+#tabs-1 {
+    height: 92%;
+    overflow: scroll;
+}
+.legend {
+    line-height: 18px;
+    color: #555;
+}
+.legend i {
+    width: 18px;
+    height: 18px;
+    float: left;
+    margin-left: 10px;
+    opacity: 0.7;
+}
+.info {
+    padding: 6px 8px;
+    background: rgba(255,255,255,0.8);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-radius: 5px;
+}
+.info h4 {
+    margin: 0 0 5px;
+    color: #777;
+}

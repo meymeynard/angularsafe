@@ -1,0 +1,77 @@
+body{
+    margin:0;
+    padding:0;
+}
+#map{ height: 80%; }
+.legend {
+    color: #555;
+}
+.legend i {
+    margin-right: 10px;
+    width: 18px;
+    height: 18px;
+    float: left;
+    opacity: 0.7;
+}
+.info {
+    padding: 6px 8px;
+    background: rgba(255,255,255,0.8);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-radius: 5px;
+}
+.info h4 {
+    margin: 0 0 5px;
+    color: #777;
+}
+
+#tabs {
+    background-color: #f3f3f3;
+    height: 80%;
+    overflow: scroll;
+    margin-left: 10px;
+    margin-right: 10px;
+    border:1px solid #AFAFAF;
+}
+#tabs-1 a, #tabs-2 a{ 
+    background-color: #c6e1ec;
+	cursor: pointer;
+}
+.active#tabs-1 a, .active#tabs-2 a{
+    background-color: #5eaeff;
+}
+#result_panel {
+    background-color: #f3f3f3;
+    height: 80%;
+    margin-left: 10px;
+    margin-right: 10px;
+    border:1px solid #AFAFAF;
+    overflow: scroll;
+}
+#result_panel h5, p{ text-align: center; }
+#result_panel h4 {
+    left: 0px;
+    right: 0px;
+    z-index: 20;
+    background-color: #5eaeff;
+	display: block;
+    position: absolute;
+	margin-top: 0px;
+	padding: .2em .2em .2em 1em;
+}
+#result_form {
+    position: relative;
+    top: 35px;
+}
+#result_form input, select, label{
+    width: 100%;
+    font-size: 11px;
+}
+#result_panel select{ font-size: 11px; }
+.tab-pane ul{
+    padding-top: 10px;
+    font-size: 12px;
+}
+#filetree {
+    padding-top: 10px;
+    padding-left: 10px;
+}
