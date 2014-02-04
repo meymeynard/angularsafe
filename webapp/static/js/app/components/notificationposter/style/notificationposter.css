@@ -1,0 +1,6 @@
+.loom-notification-poster {
+  display: inline-block;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}

@@ -1,0 +1,1 @@
+var noahApp = angular.module('noahApp', ['map_module']);

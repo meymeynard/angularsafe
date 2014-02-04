@@ -4,6 +4,7 @@ import json, httplib, urllib2, glob, os, sys
 from Settings import ROOT, DATA_PATH
 from subprocess import call
 
+'''
 from safe.api import read_layer, calculate_impact
 from safe.impact_functions.core import requirements_collect, get_doc_string, \
     requirement_check
@@ -11,11 +12,16 @@ from safe.impact_functions.inundation.flood_OSM_building_impact \
     import FloodBuildingImpactFunction
     
 from weasyprint import HTML, CSS
-
+'''
 class IndexHandler(tornado.web.RequestHandler):
 	def get(self):
 		self.render("index.html")
- 
+
+class Lol(tornado.web.RequestHandler):
+	def get(self):
+		self.render("lol.html")        
+        
+''' 
 class CalculateHandler(tornado.web.RequestHandler):
 
     def post(self):
@@ -160,7 +166,7 @@ class ImpactMapPDFHandler(tornado.web.RequestHandler):
             data.close()
             self.set_header("Content-Type", "application/pdf")
             self.write(pdf)
-    '''
+    """
         pdf = None
         filename = os.path.join(DATA_PATH, 'pdf', 'report_map.pdf')
         try:
@@ -177,7 +183,7 @@ class ImpactMapPDFHandler(tornado.web.RequestHandler):
         #data = open(os.path.join(ROOT, 'static', 'css', 'pdf.css'))
         #css = data.read()
         #HTML(string=html).write_pdf(filename)
-    '''
+    """
         
 class FileTreeHandler(tornado.web.RequestHandler):
     def post(self):
@@ -205,4 +211,4 @@ class FileTreeHandler(tornado.web.RequestHandler):
             
         to_return.append('</ul>')
         self.write(''.join(to_return))
-        
+'''        
