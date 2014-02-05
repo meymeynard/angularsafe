@@ -71,7 +71,7 @@
 			    </ul>
 			</div>
 	  	</div>
-		<div id="map" ng-controller="MapCtrl"></div>
+		<div id="map" resizable ng-controller="MapCtrl"></div>
 		<!-- end content -->
 
 	</div> <!-- end wrap -->
@@ -93,6 +93,7 @@
         
         <!-- Import javascript codes -->
         <script src="{{ static_url("js/main.js") }}"></script>
+        <script src="{{ static_url("js/app/window/WindowModule.js") }}"></script>
         <script src="{{ static_url("js/app/map/MapService.js") }}"></script>
         <script src="{{ static_url("js/app/map/MapModule.js") }}"></script>
         <script src="{{ static_url("js/app.js") }}"></script>

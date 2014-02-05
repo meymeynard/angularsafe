@@ -12,63 +12,6 @@ var styles = [
 	'Bing Maps Aerial',
 	'Bing Maps Aerial with Labels'
 ];
-//var layers = [];
-
-
-// function for fixing the map size when browser is resized
-function fixUIHeight() {
-	var mapHeight = $(window).height() - 
-		$('.navbar').height() - 
-		$('#footer').height();
-	var sideMenuHeight = mapHeight - $('#toolbar').height();
-	var mapContainer = $('#map');
-	mapContainer.height(mapHeight);
-	//map.updateSize();
-
-	if ($('#sidemenu')) {
-		$('#sidemenu').css('height', sideMenuHeight);
-	}
-	if ($('#menulevel1')) {
-		$('#menulevel1').css('height', sideMenuHeight);
-	}
-	if ($('#menulevel2')) {
-		$('#menulevel2').css('height', sideMenuHeight);
-	}
-}
-
-/*
-layers.push(
-	new ol.layer.Tile({
-		visible: true,
-		preload: Infinity,
-		source: new ol.source.XYZ({
-			attributions: [
-				new ol.Attribution({
-					html: 'Tiles &copy; '+
-					'<a href="http://services.arcgisonline.com'+
-					'/ArcGIS/rest/services/World_Topo_Map/MapServer">'+
-					'ArcGIS</a>'
-				})
-			],
-			url: 'http://server.arcgisonline.com'+
-			'/ArcGIS/rest/services/World_Topo_Map'+
-			'/MapServer/tile/{z}/{y}/{x}'
-		})
-	})
-);
-for (var i = 0, ii = styles.length; i < ii; ++i) {
-	layers.push(
-		new ol.layer.Tile({
-			visible: false,
-			preload: Infinity,
-			source: new ol.source.BingMaps({
-				key: '',
-				imagerySet: styles[i]
-			})
-		}),
-	);
-}
-*/
 
 /*
 $('#layer-select').change(function() {

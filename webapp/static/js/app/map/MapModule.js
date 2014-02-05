@@ -1,5 +1,5 @@
 (function(){
-angular.module('map_module', [
+var module = angular.module('map_module', [
     'map_service'
 ]);
 })();
