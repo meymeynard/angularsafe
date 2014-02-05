@@ -1,5 +1,4 @@
 (function(){
-var map = null;
 var attribution = null;
 var layers = [];
 
@@ -28,7 +27,7 @@ module.controller('MapCtrl', function($scope, $rootScope){
         })
     );
 
-    map = new ol.Map({
+    $rootScope.map = new ol.Map({
         target: 'map',
         layers: layers,
         renderer: ol.RendererHint.CANVAS,
@@ -48,10 +47,10 @@ module.controller('MapCtrl', function($scope, $rootScope){
         var sideMenuHeight = mapHeight - $('#toolbar').height();
         
         mapContainer.height(mapHeight);
-        map.updateSize();
+        $rootScope.map.updateSize();
         if ($('#sidemenu')) { $('#sidemenu').css('height', sideMenuHeight); }
-        if ($('#menulevel1')) { //$('#menulevel1').css('height', sideMenuHeight); }
-        if ($('#menulevel2')) { //$('#menulevel2').css('height', sideMenuHeight); }
+        //if ($('#menulevel1')) { //$('#menulevel1').css('height', sideMenuHeight); }
+        //if ($('#menulevel2')) { //$('#menulevel2').css('height', sideMenuHeight); }
     });
 });
 })();

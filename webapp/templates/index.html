@@ -50,13 +50,14 @@
 		</div> <!-- end navbar -->
 
 		<!-- begin content here -->
-		<div id="toolbar">
+		<div id="toolbar" ng-controller="SearchCtrl">
             <div id="search">
                 <input id="area" name="area" type="text" size="40"
                     placeholder="Find a place..."/>
                 <img src="{{ static_url("img/search-white.png") }}"></img>
             </div>
 	    </div>
+        
 	    <div id="sidemenu">
 	    	<div id="menubar">
 			    <ul>
@@ -96,6 +97,7 @@
         <script src="{{ static_url("js/app/window/WindowModule.js") }}"></script>
         <script src="{{ static_url("js/app/map/MapService.js") }}"></script>
         <script src="{{ static_url("js/app/map/MapModule.js") }}"></script>
+        <script src="{{ static_url("js/app/toolbar/ToolbarModule.js") }}"></script>
         <script src="{{ static_url("js/app.js") }}"></script>
         
     </body>
