@@ -5,6 +5,7 @@ from handlers.handlers import IndexHandler, CalculateHandler, \
 from handlers.layer_handlers import LayerHandler
 '''
 from handlers.handlers import IndexHandler, Lol    
+from handlers.menu_handlers import Menu1Handler, Menu2Handler
 from modules import NavbarModule
 
 import os.path
@@ -13,9 +14,14 @@ import tornado.web
 # This is where we encode the urls with their respective handlers   
 handlers = [
     (r"/", IndexHandler),
-    (r"/lol", Lol),
     #(r"/calculate", CalculateHandler),
     #(r"/layers", LayerHandler)
+]
+
+#This adds the modules that AngularJS' routing service uses
+handlers += [
+    (r"/api/menulevel1", Menu1Handler),
+    (r"/api/menulevel2", Menu2Handler),
 ]
 '''
 handlers += [

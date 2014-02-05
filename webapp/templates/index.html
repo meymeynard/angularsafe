@@ -58,12 +58,10 @@
             </div>
 	    </div>
         
-	    <div id="sidemenu">
+	    <div id="sidemenu" ng-controller="SidebarCtrl">
 	    	<div id="menubar">
 			    <ul>
-                    <li>
-                        <img id="floodbutton" src="{{ static_url("img/flood-button.png") }}" title="Flood"/>
-                    </li>
+                    <li> <img id="floodbutton" ng-click="changePath('menulevel1')" src="{{ static_url("img/flood-button.png") }}" title="Flood"/> </li>
                 <!--
                     <li><a href="#"><img src="img/storm-button.png" title="Storms"></a></li>
                     <li><a href="#"><img src="img/stormsurge-button.png" title="Storm Surge"></a></li>
@@ -72,7 +70,8 @@
 			    </ul>
 			</div>
 	  	</div>
-		<div id="map" resizable ng-controller="MapCtrl"></div>
+        <div ng-view></div>
+		<div id="map" ng-controller="MapCtrl"></div>
 		<!-- end content -->
 
 	</div> <!-- end wrap -->
@@ -98,6 +97,7 @@
         <script src="{{ static_url("js/app/map/MapService.js") }}"></script>
         <script src="{{ static_url("js/app/map/MapModule.js") }}"></script>
         <script src="{{ static_url("js/app/toolbar/ToolbarModule.js") }}"></script>
+        <script src="{{ static_url("js/app/sidebar/SidebarModule.js") }}"></script>
         <script src="{{ static_url("js/app.js") }}"></script>
         
     </body>
