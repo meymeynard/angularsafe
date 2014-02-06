@@ -1,28 +1,24 @@
-<div class="navbar navbar-default navbar-static-top">
-    <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse"
+                data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">{{ page_title }}</a>
-        </div>
-                
-        <div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-                {% for label in links %}
-                    <li><a href="{{ links[label] }}">{{ label }}</a></li>
-                {% end %}
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"> Tools <b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                        {% for label in tools %}
-                            <li><a href="{{ tools[label] }}">{{ label }}</a></li>
-                        {% end %}
-                    </ul>
-                </li>
-            </ul>
-        </div><!--/.nav-collapse -->
+        </button>
+        <span id="logo"></span>
+        <a class="navbar-brand" href="#">DOST Project NOAH</a>
+    </div>
+    <div class="collapse navbar-collapse navbar-right">
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#">Legend</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Help</a></li>
+            <li><a href="#">Sign In</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
     </div>
 </div>

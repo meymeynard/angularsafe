@@ -26,7 +26,8 @@ module.controller('MapCtrl', function($scope, $rootScope){
             })
         })
     );
-
+    
+    //this initializes the map
     $rootScope.map = new ol.Map({
         target: 'map',
         layers: layers,
@@ -36,21 +37,6 @@ module.controller('MapCtrl', function($scope, $rootScope){
             zoom: zoom,
             maxZoom: maxZoom
         })
-    });
-    
-    //this updates the map size when the window is resized
-    $rootScope.$watch('windowHeight',function(newVal, oldVal){
-        var mapHeight = newVal - 
-                        $('.navbar').height() - 
-                        $('#footer').height();
-        var mapContainer = $('#map');
-        var sideMenuHeight = mapHeight - $('#toolbar').height();
-        
-        mapContainer.height(mapHeight);
-        $rootScope.map.updateSize();
-        if ($('#sidemenu')) { $('#sidemenu').css('height', sideMenuHeight); }
-        //if ($('#menulevel1')) { //$('#menulevel1').css('height', sideMenuHeight); }
-        //if ($('#menulevel2')) { //$('#menulevel2').css('height', sideMenuHeight); }
     });
 });
 })();

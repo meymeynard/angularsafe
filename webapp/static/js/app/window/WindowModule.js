@@ -21,4 +21,5 @@ module.directive('resizable', function($window){
     };
 });
 ***/
+
 })();
