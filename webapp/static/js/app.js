@@ -3,9 +3,11 @@ var module = angular.module('noahApp', [
     'map_module',
     'window_module',
     'toolbar_module',
-    'sidebar_module'
-    ]);
-    
+    'sidebar_module',
+]);
+
+
+//configure the routing for the sidebar ng-view    
 module.config([
     '$routeProvider',
     function($routeProvider){
@@ -19,9 +21,11 @@ module.config([
         }).when('/menulevel2', {
             controller: 'Menu2Ctrl',
             templateUrl:'/api/menulevel2'
+        }).when('/menulevel3', {
+            templateUrl:'/api/menulevel3'
         }).otherwise({redirectTo:'/'});
     }
-])
+]);
     
 module.run(
     function($rootScope, $window){

@@ -7,3 +7,7 @@ class Menu1Handler(tornado.web.RequestHandler):
 class Menu2Handler(tornado.web.RequestHandler):
     def get(self):
         self.render("menu/menulevel2.html")
+        
+class Menu3Handler(tornado.web.RequestHandler):
+    def get(self):
+        self.render("menu/menulevel3.html")

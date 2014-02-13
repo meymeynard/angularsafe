@@ -184,6 +184,7 @@ class ImpactMapPDFHandler(tornado.web.RequestHandler):
         #css = data.read()
         #HTML(string=html).write_pdf(filename)
     """
+'''
         
 class FileTreeHandler(tornado.web.RequestHandler):
     def post(self):
@@ -211,4 +212,4 @@ class FileTreeHandler(tornado.web.RequestHandler):
             
         to_return.append('</ul>')
         self.write(''.join(to_return))
-'''        
+        

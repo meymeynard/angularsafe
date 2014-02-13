@@ -122,6 +122,7 @@ $(floodWeatherSelect).click(function(e){
 	}
 });
 
+/*
 $('a.return').click(function(e){
 	e.preventDefault();
 	$('#' + floodWeatherClicked).fadeOut(300);
@@ -136,3 +137,4 @@ $('a.return').click(function(e){
 	);
 	// on return, suggest to clear all radio button selections
 });
+*/

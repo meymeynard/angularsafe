@@ -4,8 +4,8 @@ from handlers.handlers import IndexHandler, CalculateHandler, \
     ImpactStyleHandler, ImpactMapPDFHandler, FileTreeHandler
 from handlers.layer_handlers import LayerHandler
 '''
-from handlers.handlers import IndexHandler, Lol    
-from handlers.menu_handlers import Menu1Handler, Menu2Handler
+from handlers.handlers import IndexHandler, FileTreeHandler    
+from handlers.menu_handlers import Menu1Handler, Menu2Handler, Menu3Handler
 from modules import NavbarModule
 
 import os.path
@@ -14,6 +14,7 @@ import tornado.web
 # This is where we encode the urls with their respective handlers   
 handlers = [
     (r"/", IndexHandler),
+    (r"/filetree", FileTreeHandler),
     #(r"/calculate", CalculateHandler),
     #(r"/layers", LayerHandler)
 ]
@@ -22,14 +23,15 @@ handlers = [
 handlers += [
     (r"/api/menulevel1", Menu1Handler),
     (r"/api/menulevel2", Menu2Handler),
+    (r"/api/menulevel3", Menu3Handler)
 ]
+
 '''
 handlers += [
     (r"/impactstyle", ImpactStyleHandler),
     (r"/json", ImpactJSONHandler),
     (r"/mappdf", ImpactMapPDFHandler),
     (r"/pdf", ImpactPDFHandler),
-    (r"/filetree", FileTreeHandler),
 ]
 '''
 
