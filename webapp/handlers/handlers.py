@@ -20,6 +20,10 @@ class IndexHandler(tornado.web.RequestHandler):
 class Lol(tornado.web.RequestHandler):
 	def get(self):
 		self.render("lol.html")        
+
+class WebsafeHandler(tornado.web.RequestHandler):
+    def get(self):
+        self.render("menu/websafe.html")
         
 ''' 
 class CalculateHandler(tornado.web.RequestHandler):
@@ -212,4 +216,3 @@ class FileTreeHandler(tornado.web.RequestHandler):
             
         to_return.append('</ul>')
         self.write(''.join(to_return))
-        

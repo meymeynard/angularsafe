@@ -13,16 +13,15 @@ module.config([
     function($routeProvider){
         $routeProvider.
         when('/', {
-            controller: 'SidebarCtrl',
-            template: ''
+            controller: 'SidebarCtrl'
         }).when('/menulevel1', {
             controller: 'Menu1Ctrl',
             templateUrl:'/api/menulevel1'
         }).when('/menulevel2', {
             controller: 'Menu2Ctrl',
             templateUrl:'/api/menulevel2'
-        }).when('/menulevel3', {
-            templateUrl:'/api/menulevel3'
+        }).when('/websafe', {
+            templateUrl:'/api/websafe'
         }).otherwise({redirectTo:'/'});
     }
 ]);

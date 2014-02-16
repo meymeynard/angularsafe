@@ -4,8 +4,8 @@ from handlers.handlers import IndexHandler, CalculateHandler, \
     ImpactStyleHandler, ImpactMapPDFHandler, FileTreeHandler
 from handlers.layer_handlers import LayerHandler
 '''
-from handlers.handlers import IndexHandler, FileTreeHandler    
-from handlers.menu_handlers import Menu1Handler, Menu2Handler, Menu3Handler
+from handlers.handlers import IndexHandler, FileTreeHandler, WebsafeHandler    
+from handlers.menu_handlers import Menu1Handler, Menu2Handler
 from modules import NavbarModule
 
 import os.path
@@ -23,7 +23,7 @@ handlers = [
 handlers += [
     (r"/api/menulevel1", Menu1Handler),
     (r"/api/menulevel2", Menu2Handler),
-    (r"/api/menulevel3", Menu3Handler)
+    (r"/api/websafe", WebsafeHandler)
 ]
 
 '''

@@ -229,8 +229,7 @@ code {
   /*overflow: hidden;*/
 }
 
-#flood_weather h4
-{
+#flood_weather h4 {
   color: white;
   margin: 10px 20px;
   padding: 5px 0;
@@ -244,8 +243,7 @@ code {
 }
 
 #flood_weather ul,
-.content ul
-{
+.content ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -255,8 +253,7 @@ code {
 }
 
 #flood_weather li,
-.content li
-{
+.content li {
   line-height: 2em;
   padding-left: 20px;
   padding-bottom: 9px;
@@ -279,8 +276,7 @@ code {
 }
 
 
-.content h5
-{
+.content h5 {
   list-style-type: none;
   width: 200px;
   margin: 10px 0;
@@ -294,17 +290,9 @@ code {
 
 /*
 #menulevel2 {
-    float: left;
-    position: fixed;
-    overflow: hidden;
-    top: 90px;
-    left: 60px;
-    width: 200px;
-    height: 100%;
     list-style-type: none;
     margin: 0;
     padding: 0;
-    background-color: rgba(0, 0, 0, 0.7);
     z-index: 100;
 }
 */
