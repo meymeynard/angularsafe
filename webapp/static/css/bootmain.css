@@ -188,35 +188,6 @@ code {
   z-index: 2;
 }
 
-.menu {
-  float: left;
-  position: fixed;
-  /*overflow: hidden;*/
-  top: 90px;
-  left: 60px;
-  height: 100%;
-  width: 200px; /* orig is 200px */
-  background-color: rgba(0, 0, 0, 0.8);
-  z-index: 2;
-}
-
-.inasafe_window {
-  float: right;
-  position: fixed;
-  /*overflow: hidden;*/
-  top: 90px;
-  right: 0px;
-  height: 100%;
-  width: 200px; /* orig is 200px */
-  background-color: rgba(0, 0, 0, 0.8);
-  z-index: 2;
-}
-
-.inasafe_window label {
-  color: #008EF1;
-  padding-top: 5px;
-}
-
 #flood_weather, .content {
   list-style-type: none;
   margin: 0;
@@ -326,4 +297,46 @@ li.selected-flood {
   background: url('../img/selector-test3.png') no-repeat -192px 0 transparent;
   margin-left: 188px;
   z-index: 3;
+}
+
+
+
+.inasafe_window {
+  float: right;
+  position: fixed;
+  top: 90px;
+  right: 0px;
+  //padding-top: 5px;
+  height: 100%;
+  width: 250px;
+  background-color: rgba(0, 0, 0, 0.8);
+  //background-color: #FFF;         // white
+  //background-color: #BCC;
+  z-index: 2;
+}
+
+/*
+ *WebSAFE styles
+*/
+
+.filetree {
+    margin: 5 0 0 0;
+    padding: 5 10 5 10;
+    height: 150px;
+    overflow: auto;
+    background-color: #BCC;
+}
+
+.inasafe_window label {
+  color: #008EF1;
+  padding-top: 5px;
+}
+
+#exposure, #hazard, #impact{
+  width: 100%;
+  font-size: 11px;
+}
+
+.inasafe_window legend {
+    margin-bottom: 10px;
 }

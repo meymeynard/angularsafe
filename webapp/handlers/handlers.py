@@ -118,14 +118,6 @@ class ImpactStyleHandler(tornado.web.RequestHandler):
         self.write(f)
         data.close()
         
-class ImpactKMLHandler(tornado.web.RequestHandler):
-    def get(self):
-        data = open(os.path.join(DATA_PATH, 'impact', 'impact.KML'))
-        f = data.read()
-        self.set_header("Content-Type", "application/xml")
-        self.write(f)
-        data.close()
-        
 class ImpactPDFHandler(tornado.web.RequestHandler):
     def get(self):
         data = open(os.path.join(DATA_PATH, 'pdf', 'report.pdf'))

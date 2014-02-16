@@ -1,27 +1,23 @@
-<div class="menu">
-	<div class="content" ng-controller="FileTreeCtrl">
-		<a class="return" href="#"></a>
-	</div>
-</div>
-
 <div class="inasafe_window">
-    <img ng-src="{{ static_url("img/inasafe/logo.png") }}">
     <div class="container">
+        <img ng-src="{{ static_url("img/inasafe/logo.png") }}" style="width:100%;">
+        <div class="filetree" ng-controller="FileTreeCtrl"> </div>
         <legend>
             <label>Question</label>
         </legend>
         
         <label>In the event of:</label>
-        <input type="text" style="width:100%; font-size:10px">
+        <input type="text" id="hazard">
         <label>How Many:</label>
-        <input type="text" style="width:100%; font-size:10px">
+        <input type="text" id="exposure">
         <label>Will be:</label>
-        <input type="text" style="width:100%; font-size:10px">
+        <input type="text" id="impact">
         
         <div class="container">
             <br/>
             <button class="btn btn-danger btn-sm">Reset</button>
             <button class="btn btn-primary btn-sm">Calculate</button>
         </div>
+        
     </div>
 </div>
