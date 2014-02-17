@@ -21,6 +21,7 @@ module.config([
             controller: 'Menu2Ctrl',
             templateUrl:'/api/menulevel2'
         }).when('/websafe', {
+            controller: 'WebsafeCtrl',
             templateUrl:'/api/websafe'
         }).otherwise({redirectTo:'/'});
     }
@@ -34,12 +35,12 @@ module.run(
         $rootScope.footer = $('#footer');
         $rootScope.mapdiv = $('#map');
         $rootScope.toolbar = $('#toolbar');
-        
     
         function initWindowSize(){
             $rootScope.windowHeight = $window.innerHeight;
             $rootScope.windowWidth = $window.innerWidth;
         }; 
+        
         initWindowSize();
         
         angular.element($window).bind('resize', function(){
@@ -47,16 +48,8 @@ module.run(
             $rootScope.$apply();
         });
         
-        
         //this updates the map and other UI size when the window is resized
-        $rootScope.$watch('windowHeight',function(newVal, oldVal){
-            /*
-            var mapHeight = newVal - 
-                            $('.navbar').height() - 
-                            $('#footer').height();
-            var mapContainer = $('#map');
-            var sideMenuHeight = mapHeight - $('#toolbar').height();
-            */
+        $rootScope.$watch('windowHeight', function(newVal, oldVal){
             var mapHeight = newVal - 
                             $rootScope.navbar.height() -
                             $rootScope.footer.height();
@@ -65,9 +58,13 @@ module.run(
             $rootScope.mapdiv.height(mapHeight);
             $rootScope.map.updateSize();
             if ($('#sidemenu')) { $('#sidemenu').css('height', sideMenuHeight); }
+            
+            if ($('.inasafe_window')) { 
+                $('.inasafe_window').css({'overflow': 'auto', 'height': sideMenuHeight});
+            }
             //if ($('#menulevel1')) { //$('#menulevel1').css('height', sideMenuHeight); }
             //if ($('#menulevel2')) { //$('#menulevel2').css('height', sideMenuHeight); }
-    });
+        });
     }
 );
 })();

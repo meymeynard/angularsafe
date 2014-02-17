@@ -23,6 +23,29 @@ module.controller('Menu1Ctrl', [
     }
 ]);
 
+module.controller('WebsafeCtrl', [
+    '$scope',
+    '$window',
+    '$rootScope',
+    function($scope, $window, $rootScope){
+        $scope.help_toggle = false;
+        
+        $scope.showHelp = function(){
+            $scope.help_toggle = true;
+        };
+        
+        $scope.hideHelp = function(){
+            $scope.help_toggle = false;
+        };
+        
+        var mapHeight = $window.innerHeight - 
+                            $rootScope.navbar.height() -
+                            $rootScope.footer.height();
+        var sideMenuHeight = mapHeight - $rootScope.toolbar.height();
+        $('.inasafe_window').css({'overflow': 'auto', 'height': sideMenuHeight});
+    }
+]);
+
 module.controller('FileTreeCtrl', [
     '$scope',
     '$element',
