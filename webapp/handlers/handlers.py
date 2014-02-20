@@ -15,11 +15,7 @@ from weasyprint import HTML, CSS
 '''
 class IndexHandler(tornado.web.RequestHandler):
 	def get(self):
-		self.render("index.html")
-
-class Lol(tornado.web.RequestHandler):
-	def get(self):
-		self.render("lol.html")        
+		self.render("index.html")       
 
 class WebsafeHandler(tornado.web.RequestHandler):
     def get(self):
